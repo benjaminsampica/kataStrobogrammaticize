@@ -3,7 +3,7 @@ using FluentAssertions;
 using System;
 using System.Text;
 
-static class Kata
+static class BruteForce
 {
     public static int GetStrobogrammaticNumbers(string firstVal, string secondVal)
     {
@@ -44,17 +44,17 @@ static class Kata
 }
 
 [TestClass]
-public class GetUpsideDownableNumbersTests
+public class BruteForceGetStrobogrammaticNumbersTests
 {
     [TestMethod]
-    public void Given_0And0_ReturnsCountOf1() => Kata.GetStrobogrammaticNumbers("0", "0").Should().Be(1);
+    public void Given_0And0_ReturnsCountOf1() => BruteForce.GetStrobogrammaticNumbers("0", "0").Should().Be(1);
 
     [TestMethod]
-    public void Given_0And1_ReturnsCountOf2() => Kata.GetStrobogrammaticNumbers("0", "1").Should().Be(2);
+    public void Given_0And1_ReturnsCountOf2() => BruteForce.GetStrobogrammaticNumbers("0", "1").Should().Be(2);
 
     [TestMethod]
-    public void Given_0And25_ReturnsCountOf2() => Kata.GetStrobogrammaticNumbers("0", "25").Should().Be(4);
+    public void Given_0And25_ReturnsCountOf4() => BruteForce.GetStrobogrammaticNumbers("0", "25").Should().Be(4);
 
     [TestMethod]
-    public void Given_100And1000_ReturnsCountOf12() => Kata.GetStrobogrammaticNumbers("100", "1000").Should().Be(12);
+    public void Given_100And1000_ReturnsCountOf12() => BruteForce.GetStrobogrammaticNumbers("100", "1000").Should().Be(12);
 }
